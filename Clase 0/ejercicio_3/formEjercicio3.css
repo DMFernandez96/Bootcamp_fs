@@ -1,0 +1,66 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 30px;
+  color: #000000;
+}
+
+.form-container {
+  background-color: #fff;
+  padding: 20px;
+  width: 320px;
+  margin: 0 auto;
+  text-align: left;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-container p {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+/* Estilo del botón de envío */
+#sendButton {
+  background-color: #0599f4;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer; /*transforma el cursor cuando se hace hover en el boton */
+  width: 100%;
+  font-size: 16px;
+}
+
+/* Cambio de color al hacer hover sobre el boton enviar*/
+#sendButton:hover {
+  background-color: #007bff;
+}
