@@ -1,7 +1,9 @@
+/* Estilos por defecto (modo claro) */
 body {
   font-family: Arial, sans-serif;
   background-color: #f0f0f0;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -48,18 +50,89 @@ input[type="date"] {
   box-sizing: border-box;
 }
 
-#sendButton {
+#sendButton,
+#style1Button,
+#highContrastButton {
   background-color: #0599f4;
   color: white;
   padding: 10px;
   border: none;
   border-radius: 5px;
-  cursor: pointer; /*transforma el cursor cuando se hace hover en el boton */
+  cursor: pointer;
   width: 100%;
   font-size: 16px;
 }
 
-/* Cambio de color al hacer hover sobre el boton enviar*/
-#sendButton:hover {
+#sendButton:hover,
+#style1Button:hover,
+#highContrastButton:hover {
   background-color: #007bff;
+}
+
+/* Estilos para el modo de alto contraste */
+.high-contrast {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+.high-contrast .container {
+  background-color: #1a1a1a;
+}
+
+.high-contrast .form-container {
+  background-color: #333333;
+}
+
+.high-contrast h1 {
+  color: white;
+}
+
+.high-contrast label {
+  color: white;
+}
+
+.high-contrast input[type="text"],
+.high-contrast input[type="email"],
+.high-contrast input[type="date"] {
+  background-color: #4d4d4d;
+  border: 1px solid #555;
+  color: white;
+}
+
+.high-contrast #sendButton,
+.high-contrast #style1Button,
+.high-contrast #highContrastButton {
+  background-color: #ffd700;
+  color: #1e1e1e;
+}
+
+.high-contrast #sendButton:hover,
+.high-contrast #style1Button:hover,
+.high-contrast #highContrastButton:hover {
+  background-color: #ffc107;
+}
+
+/* Estilo de los botones de cambio de estilo */
+.style-buttons {
+  margin-top: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.style-buttons button {
+  background-color: #ffd700;
+  color: #333;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 150px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.style-buttons button:hover {
+  background-color: #ffc107;
 }

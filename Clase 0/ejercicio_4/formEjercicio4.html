@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ejercicio 4 - Campos obligatorios</title>
+    <title>Tarea 4</title>
     <link rel="stylesheet" href="formEjercicio4.css" />
   </head>
   <body>
@@ -36,14 +36,20 @@
             <input type="date" id="birthDate" name="birthDate" required />
           </p>
           <p>
-            <label for="country" required>País de residencia:</label>
+            <label for="country">País de residencia:</label>
             <input type="text" id="country" name="country" required />
           </p>
           <p>
-            <input type="submit" id="sendButton" value="Enviar" />
+            <input type="submit" value="Enviar" id="sendButton" />
           </p>
         </form>
       </div>
     </div>
+
+    <div class="style-buttons">
+      <button id="style1Button">Estilo 1</button>
+      <button id="highContrastButton">Estilo de Alto Contraste</button>
+    </div>
+    <script src="formEjercicio4.js"></script>
   </body>
 </html>
