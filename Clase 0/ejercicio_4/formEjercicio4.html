@@ -47,7 +47,14 @@
           </p>
           <p>
             <label for="birthDate">Fecha de nacimiento:</label>
-            <input type="date" id="birthDate" name="birthDate" required />
+            <input
+              type="date"
+              id="birthDate"
+              name="birthDate"
+              required
+              min="1900-01-01"
+              title="Debes ser mayor a 18 años y seleccionar una fecha valida."
+            />
           </p>
           <p>
             <label for="country">País de residencia:</label>

@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const style1Button = document.getElementById("style1Button");
   const highContrastButton = document.getElementById("highContrastButton");
+  const birthDateInput = document.getElementById("birthDate");
   const body = document.body;
 
   /*
@@ -25,4 +26,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
   style1Button.addEventListener("click", applyStyle1);
   highContrastButton.addEventListener("click", applyHighContrast);
+
+  //fecha actual
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  //fecha mínima para que sea mayor de 18 años
+  const minAdultAgeDate = new Date(
+    today.getFullYear() - 18,
+    today.getMonth(),
+    today.getDate()
+  );
+
+  //fecha máxima para seleccionar es "hoy"
+  birthDateInput.max = today.toISOString().split("T")[0];
+  birthDateInput.min = "1900-01-01";
+
+  birthDateInput.addEventListener("change", function () {
+    const inputDate = new Date(this.value);
+    //si se ingresa una fecha posterior a la de edad minima
+    if (inputDate > minAdultAgeDate) {
+      alert("Debes ser mayor a 18 años");
+      this.value = ""; // limpia el campo de entrada si la fecha es erronea
+    }
+  });
 });
