@@ -13,11 +13,25 @@
         <form action="#" method="post">
           <p>
             <label for="name">Nombre:</label>
-            <input type="text" id="name" name="name" required />
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              pattern="[A-Za-z\s]{2,}"
+              title="El nombre solo puede contener letras y espacios, y debe tener al menos 2 caracteres."
+            />
           </p>
           <p>
             <label for="surname">Apellido:</label>
-            <input type="text" id="surname" name="surname" required />
+            <input
+              type="text"
+              id="surname"
+              name="surname"
+              required
+              pattern="[A-Za-z\s]{2,}"
+              title="El apellido solo puede contener letras y espacios, y debe tener al menos 2 caracteres."
+            />
           </p>
           <p>
             <label for="email">Email:</label>
@@ -33,11 +47,25 @@
           </p>
           <p>
             <label for="birthDate">Fecha de nacimiento:</label>
-            <input type="date" id="birthDate" name="birthDate" required />
+            <input
+              type="date"
+              id="birthDate"
+              name="birthDate"
+              required
+              min="1900-01-01"
+              title="Debes ser mayor a 18 años y seleccionar una fecha valida."
+            />
           </p>
           <p>
             <label for="country">País de residencia:</label>
-            <input type="text" id="country" name="country" required />
+            <input
+              type="text"
+              id="country"
+              name="country"
+              required
+              pattern="[A-Za-z\s]{2,}"
+              title="El país de residencia solo puede contener letras y espacios, y debe tener al menos 2 caracteres."
+            />
           </p>
           <p>
             <input type="submit" value="Enviar" id="sendButton" />
